@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online Book Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+ 
+    <style>
+@media (max-width: 1020px) {
+    .nav-link {
+        padding-bottom: 40px;
+    }
+}
+.navbar {
+    background: linear-gradient(45deg, #ff7b00, #d4e300);
+    box-shadow: 0 0 10px 0 #613737;
+}
+
+.nav-link {
+    color: #fff;
+    font-size: 16px;
+    margin-top: -30px;
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+.nav-link:hover {
+    color: #d4e300; /* Change hover color */
+}
+
+.form-control {
+    border-radius: 30px;
+    margin-right: 15px;
+    padding: 10px 15px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.searchicon {
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.searchicon:hover {
+    background-color: #d4e300; 
+}
+/*carousel-container start*/
+    .carousel-container {
+            background-color: #1a1a1a; 
+            position: relative;
+            height: 500px; 
+            width: 80%; 
+            margin: 20px auto;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); 
+        }
+
+        .carousel-item {
+            background-color: #1a1a1a; 
+            color: #fff; 
+            padding: 40px;
+            text-align: left;
+        }
+        .carousel-item img {
+    position: relative;
+    top: -30px;
+    max-width: 100%;
+    height: 60%;
+    border-radius: 15px;
+    transition: transform 0.5s ease;
+    box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.3);
+}
+
+.carousel-item:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+}
+
+        .text-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 24px;
+            color: #d4e300;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .carousel-title {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 2rem;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .list-group-item {
+        background-color: #f8f9fa;
+        color: #495057; 
+        border-color: #ced4da; 
+        font-size: 18px; 
+        margin-bottom: 8px;
+        border-radius: 8px; 
+        transition: all 0.3s ease;
+    }
+
+    .list-group-item:hover {
+        background-color: #e9ecef; 
+        color: #343a40; 
+    }
+        /* Footer Styles */
+        .footer {
+        background-color: #222;
+        color: #fff;
+        padding: 40px 0;
+    }
+
+    .footer h5 {
+        color: #d4e300;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .footer ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer ul li a {
+        color: #d4e300;
+        text-decoration: none;
+    }
+
+    .footer ul li a:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+.navbar {
+    background: linear-gradient(45deg, #ff7b00, #d4e300);
+    box-shadow: 0 0 10px 0 #613737;
+}
+
+.carousel-container {
+    background: linear-gradient(to bottom, #d4e300, #ff7b00);
+}
+
+.footer {
+    background: linear-gradient(to right, #ff7b00, #d4e300);
+    color: #fff;
+    padding: 40px 0;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="2.jpg" alt="Logo" width="50" height="50" class="d-inline-block">
+                <h2>Online Book Store</h2>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mt-5">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">User Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Registration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Catalog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Payment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Order Confirmation</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <button class="searchicon" style="font-size:24px;color:red;"> <i class="fa fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+<div class="carousel-container" style="height:500px;">
+    <h2 class="carousel-title">Featured Books</h2>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="2.jpg" alt="Slide 1" class="imgc">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-container">
+                            <h3>"To Kill a Mockingbird" by Harper Lee</h3>
+                            <p>A timeless classic addressing racial injustice in the American South.</p>
+                            <p>5 stars: A poignant exploration of morality and compassion.</p>
+                            <p><strong>Author:</strong> Harper Lee</p>
+                            <p><strong>Genre:</strong> Fiction, Historical</p>
+                            <p><strong>Published:</strong> July 11, 1960</p>
+                            <p><strong>Pages:</strong> 281</p>
+                            <p><strong>ISBN:</strong> 0-06-112008-1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="2.jpg" alt="Slide 2" class="imgc">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-container">
+                            <h3>"The Great Gatsby" by F. Scott Fitzgerald</h3>
+                            <p>A tale of excess and disillusionment set in the Roaring Twenties.</p>
+                            <p>4 stars: Captivating, but some characters lacked depth.</p>
+                            <p><strong>Author:</strong> F. Scott Fitzgerald</p>
+                            <p><strong>Genre:</strong> Fiction, Tragedy</p>
+                            <p><strong>Published:</strong> April 10, 1925</p>
+                            <p><strong>Pages:</strong> 180</p>
+                            <p><strong>ISBN:</strong> 978-0-7432-7356-5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="2.jpg" alt="Slide 3" class="imgc">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-container">
+                            <h3>"The Hitchhiker's Guide to the Galaxy" by Douglas Adams</h3>
+                            <p>A hilarious space adventure that defies logic and embraces absurdity.</p>
+                            <p>4.5 stars: A comedic masterpiece with a unique interstellar twist.</p>
+                            <p><strong>Author:</strong> Douglas Adams</p>
+                            <p><strong>Genre:</strong> Science Fiction, Comedy</p>
+                            <p><strong>Published:</strong> October 12, 1979</p>
+                            <p><strong>Pages:</strong> 224</p>
+                            <p><strong>ISBN:</strong> 978-0-330-25864-7</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="2.jpg" alt="Slide 4" class="imgc">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-container">
+                            <h3>"The Catcher in the Rye" by J.D. Salinger</h3>
+                            <p>A coming-of-age narrative following the angst-ridden Holden Caulfield.</p>
+                            <p>3 stars: Engaging, but the protagonist's cynicism can be overwhelming.</p>
+                            <p><strong>Author:</strong> J.D. Salinger</p>
+                <p><strong>Genre:</strong> Fiction, Bildungsroman</p>
+                <p><strong>Published:</strong> July 16, 1951</p>
+                <p><strong>Pages:</strong> 224</p>
+                <p><strong>ISBN:</strong> 978-0-316-76948-0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="2.jpg" alt="Slide 5" class="imgc">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-container">
+                            <h3>"The Da Vinci Code" by Dan Brown</h3>
+                            <p>A gripping mystery involving art, symbolism, and a conspiracy.</p>
+                            <p>3.5 stars: Fast-paced and intriguing, but the writing style is somewhat formulaic.</p>
+                            <p><strong>Author:</strong> Dan Brown</p>
+                <p><strong>Genre:</strong> Mystery, Thriller</p>
+                <p><strong>Published:</strong> March 18, 2003</p>
+                <p><strong>Pages:</strong> 454</p>
+                <p><strong>ISBN:</strong> 0-385-50420-9</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<!-- After your slider -->
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Popular Authors</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item list-group-item-action">J.K. Rowling</li>
+                <li class="list-group-item list-group-item-action">Stephen King</li>
+                <li class="list-group-item list-group-item-action">Agatha Christie</li>
+                <li class="list-group-item list-group-item-action">George R.R. Martin</li>
+                <li class="list-group-item list-group-item-action">Haruki Murakami</li>
+                <li class="list-group-item list-group-item-action">Margaret Atwood</li>
+                <li class="list-group-item list-group-item-action">John Grisham</li>
+                <li class="list-group-item list-group-item-action">J.R.R. Tolkien</li>
+                <li class="list-group-item list-group-item-action">Ernest Hemingway</li>
+                <li class="list-group-item list-group-item-action">Jane Austen</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item list-group-item-action">Leo Tolstoy</li>
+                <li class="list-group-item list-group-item-action">Fyodor Dostoevsky</li>
+                <li class="list-group-item list-group-item-action">Virginia Woolf</li>
+                <li class="list-group-item list-group-item-action">Mark Twain</li>
+                <li class="list-group-item list-group-item-action">Charles Dickens</li>
+                <li class="list-group-item list-group-item-action">Emily Bronte</li>
+                <li class="list-group-item list-group-item-action">Oscar Wilde</li>
+                <li class="list-group-item list-group-item-action">Herman Melville</li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+   
+    <h2>Bestsellers</h2>
+    <div class="row">
+        
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <img src="2.jpg" class="card-img-top" alt="Book 1">
+                <div class="card-body">
+                    <h5 class="card-title">Book Title 1</h5>
+                    <p class="card-text">Brief description of Book 1.</p>
+                    
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <img src="2.jpg" class="card-img-top" alt="Book 1">
+                <div class="card-body">
+                    <h5 class="card-title">Book Title 1</h5>
+                    <p class="card-text">Brief description of Book 1.</p>
+                    
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <img src="2.jpg" class="card-img-top" alt="Book 1">
+                <div class="card-body">
+                    <h5 class="card-title">Book Title 1</h5>
+                    <p class="card-text">Brief description of Book 1.</p>
+                    
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <img src="2.jpg" class="card-img-top" alt="Book 1">
+                <div class="card-body">
+                    <h5 class="card-title">Book Title 1</h5>
+                    <p class="card-text">Brief description of Book 1.</p>
+                
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <img src="2.jpg" class="card-img-top" alt="Book 1">
+                <div class="card-body">
+                    <h5 class="card-title">Book Title 1</h5>
+                    <p class="card-text">Brief description of Book 1.</p>
+                   
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <img src="2.jpg" class="card-img-top" alt="Book 1">
+                <div class="card-body">
+                    <h5 class="card-title">Book Title 1</h5>
+                    <p class="card-text">Brief description of Book 1.</p>
+                    
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col text-center">
+                    <a href="#explore" class="btn btn-primary btn-lg">Explore More</a>
+                </div>
+            </div>
+        </div>
+        <footer class="footer mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>About Us</h5>
+                        <p>Provide a brief description of your bookstore or its mission.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Contact Us</h5>
+                        <ul>
+                            <li>Email: bookstore@example.com</li>
+                            <li>Phone: +1 234 567 890</li>
+                           
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Catalog</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
+

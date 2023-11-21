@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        .nav-bar{
+            background-color: brown;
+        }
+        .navbar-brand img {
+            margin-right: 10px;
+        }
+        .navbar-brand h2 {
+            margin: 0;
+        }
+        .navbar-nav .nav-link {
+            padding: 10px 15px;
+        }
+        .searchicon {
+            background: none;
+            border: none;
+            color: blue; /* Change the color of the search icon button */
+        }
+        .navbar-nav.ml-auto {
+            margin-left: auto !important;
+        }
+        body {
+            background: linear-gradient(to bottom right, #345bdb, rgb(101, 174, 223));
+            font-family: Arial, sans-serif;
+        }
+
+        h3 {
+            margin-top: 20px;
+            text-decoration: underline;
+        }
+
+        table {
+            margin: 20px auto;
+            background-color: white;
+            border: 3px solid #ccc;
+            border-collapse: collapse;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        textarea {
+            width: calc(100% - 24px);
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 8px 16px;
+            margin: 10px 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 45%;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        input[type="reset"] {
+            background-color: #f44336;
+            color: white;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #d32f2f;
+        }
+
+        @media (max-width: 767px) {
+            table {
+                width: 100%;
+            }
+
+            input[type="submit"],
+            input[type="reset"] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: brown;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="2.jpg" alt="Logo" width="50" height="50">
+                <h2>Online Book Store</h2>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">User Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Registration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Catalog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Payment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Order Confirmation</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <button class="searchicon" style="font-size:24px;color:red;"> <i class="fa fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h3 align="center"><u>REGISTRATION PAGE</u></h3>
+        <table>
+            <tr>
+                <td>
+                    <form name="f1" action="" method="post" onsubmit="">
+                        <table cellspacing="10" cellpadding="5">
+                            <tr>
+                                <td>NAME</td>
+                                <td><input type="text" size="30" name="uname"></td>
+                            </tr>
+                            <tr>
+                                <td>PASSWORD</td>
+                                <td><input type="password" size="30" name="pass"></td>
+                            </tr>
+                            <tr>
+                                <td>E-MAIL ID</td>
+                                <td><input type="text" size="30" name="email"></td>
+                            </tr>
+                            <tr>
+                                <td>PHONE NUMBER</td>
+                                <td><input type="text" size="15" name="phone"></td>
+                            </tr>
+                            <tr>
+                                <td>GENDER</td>
+                                <td><input type="radio" name="gen" value="m">MALE
+                                    <input type="radio" name="gen" value="f">FEMALE </td>
+                            </tr>
+                            <tr>
+                                <td>DATE OF BIRTH</td>
+                                <td><input type="date"></td>
+                            </tr>
+                            <tr>
+                                <td>LANGUAGES KNOWN</td>
+                                <td>
+                                    <input type="checkbox" value="eng" name="lang" />ENGLISH
+                                    <input type="checkbox" value="tel" name="lang" />TELUGU
+                                    <input type="checkbox" value="hin" name="lang" />HINDI
+                                    <input type="checkbox" value="tam" name="lang" />TAMIL
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ADDRESS</td>
+                                <td><textarea name="addr" cols="25" rows="5"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="center">
+                                    <input type="submit" value="SUBMIT">
+                                    <input type="reset" value="RESET">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>
